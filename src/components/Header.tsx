@@ -20,7 +20,7 @@ export default function Header() {
           <Link to="/" className="flex items-center space-x-2">
             <Shield className="h-6 w-6 text-primary" />
             <span className="text-lg font-black tracking-tighter text-foreground uppercase">
-              Safe Space <span className="text-primary">Africa</span>
+              Speak Safe <span className="text-primary">Africa</span>
             </span>
           </Link>
         </div>

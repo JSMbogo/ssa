@@ -82,7 +82,7 @@ function App() {
 
           <div className="space-y-6 relative z-10">
             <p className="text-lg text-muted-foreground leading-relaxed max-w-xl font-bold">
-              Safe Space Africa provides independent safeguarding services that help organizations create safe reporting environments.
+              Speak Safe Africa provides independent safeguarding services that help organizations create safe reporting environments.
             </p>
             <div className="flex flex-col sm:flex-row shadow-[10px_10px_0_rgba(0,0,0,0.05)]">
               <button className="bg-primary px-8 py-6 text-sm font-black uppercase tracking-[0.3em] text-primary-foreground hover:bg-primary/90 transition-all flex items-center justify-center border-r border-white/10 flex-grow">
@@ -103,7 +103,7 @@ function App() {
           <div className="relative border-[12px] border-white shadow-[-15px_15px_0_rgba(0,0,0,0.05)] z-10 w-full aspect-square overflow-hidden max-w-[400px]">
             <img
               src="/hero.png"
-              alt="Safe Space Africa Hero"
+              alt="Speak Safe Africa Hero"
               className="w-full h-full object-cover grayscale contrast-150 brightness-90"
             />
           </div>

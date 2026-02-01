@@ -8,7 +8,7 @@ export default function Footer() {
                     <div className="flex items-center space-x-2">
                         <Shield className="h-10 w-10 text-primary" />
                         <span className="text-3xl font-black tracking-tighter uppercase">
-                            Safe Space <span className="text-primary tracking-normal">Africa</span>
+                            Speak Safe <span className="text-primary tracking-normal">Africa</span>
                         </span>
                     </div>
                     <p className="text-emerald-100/40 text-lg max-w-md font-medium">
@@ -33,7 +33,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="border-t border-white/5 p-8 text-center text-emerald-100/20 text-[10px] font-black uppercase tracking-[0.5em]">
-                <p>© 2026 Safe Space Africa. All rights reserved.</p>
+                <p>© 2026 Speak Safe Africa. All rights reserved.</p>
             </div>
         </footer>
     )
