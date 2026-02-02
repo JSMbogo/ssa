@@ -11,7 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SignUpRouteImport } from './routes/sign-up'
 import { Route as SignInRouteImport } from './routes/sign-in'
+import { Route as ReportRouteImport } from './routes/report'
 import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DemoConvexRouteImport } from './routes/demo/convex'
 import { Route as DemoClerkRouteImport } from './routes/demo/clerk'
@@ -36,9 +38,19 @@ const SignInRoute = SignInRouteImport.update({
   path: '/sign-in',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReportRoute = ReportRouteImport.update({
+  id: '/report',
+  path: '/report',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProfileRoute = ProfileRouteImport.update({
   id: '/profile',
   path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -110,7 +122,9 @@ const DemoStartSsrDataOnlyRoute = DemoStartSsrDataOnlyRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
   '/profile': typeof ProfileRoute
+  '/report': typeof ReportRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
   '/demo/clerk': typeof DemoClerkRoute
@@ -128,7 +142,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
   '/profile': typeof ProfileRoute
+  '/report': typeof ReportRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
   '/demo/clerk': typeof DemoClerkRoute
@@ -147,7 +163,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
   '/profile': typeof ProfileRoute
+  '/report': typeof ReportRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
   '/demo/clerk': typeof DemoClerkRoute
@@ -167,7 +185,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/contact'
     | '/profile'
+    | '/report'
     | '/sign-in'
     | '/sign-up'
     | '/demo/clerk'
@@ -185,7 +205,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/contact'
     | '/profile'
+    | '/report'
     | '/sign-in'
     | '/sign-up'
     | '/demo/clerk'
@@ -203,7 +225,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/contact'
     | '/profile'
+    | '/report'
     | '/sign-in'
     | '/sign-up'
     | '/demo/clerk'
@@ -222,7 +246,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
   ProfileRoute: typeof ProfileRoute
+  ReportRoute: typeof ReportRoute
   SignInRoute: typeof SignInRoute
   SignUpRoute: typeof SignUpRoute
   DemoClerkRoute: typeof DemoClerkRoute
@@ -255,11 +281,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SignInRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/report': {
+      id: '/report'
+      path: '/report'
+      fullPath: '/report'
+      preLoaderRoute: typeof ReportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/profile': {
       id: '/profile'
       path: '/profile'
       fullPath: '/profile'
       preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -358,7 +398,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
   ProfileRoute: ProfileRoute,
+  ReportRoute: ReportRoute,
   SignInRoute: SignInRoute,
   SignUpRoute: SignUpRoute,
   DemoClerkRoute: DemoClerkRoute,

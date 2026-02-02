@@ -26,8 +26,9 @@ export default function Footer() {
                 <div className="p-12 space-y-6">
                     <h5 className="font-black text-white text-xs uppercase tracking-[0.3em] border-b border-white/10 pb-4">Contact</h5>
                     <ul className="space-y-4 text-emerald-100/60 font-bold uppercase tracking-widest text-[10px]">
-                        <li>General Enquiries: info@safespaceafrica.org</li>
-                        <li>Secure Reporting: report@safespaceafrica.org</li>
+                        <li>General Enquiries: info@speaksafe.africa</li>
+                        <li>Secure Reporting: report@speaksafe.africa</li>
+                        <li>Calls / WhatsApp / SMS: 0700512997</li>
                         <li>Location: Africa Regional Operations</li>
                     </ul>
                 </div>

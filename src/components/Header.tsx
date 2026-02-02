@@ -45,9 +45,12 @@ export default function Header() {
 
         <div className="flex items-center h-full">
           <div className="hidden lg:flex items-center h-full">
-            <button className="h-full bg-primary px-8 text-xs font-bold uppercase tracking-widest text-primary-foreground hover:bg-primary/90 transition-all border-l border-border">
+            <Link
+              to="/report"
+              className="h-full bg-primary px-8 text-xs font-bold uppercase tracking-widest text-primary-foreground hover:bg-primary/90 transition-all border-l border-border flex items-center"
+            >
               Report Incident
-            </button>
+            </Link>
             <div className="px-6 h-full flex items-center justify-center border-l border-r border-border bg-secondary/5 hover:bg-secondary/10 transition-colors cursor-pointer w-[140px]">
               <ClerkHeader />
             </div>
@@ -81,9 +84,13 @@ export default function Header() {
               <div className="p-6 border-b border-border">
                 <ClerkHeader />
               </div>
-              <button className="p-6 bg-primary text-lg font-bold uppercase tracking-widest text-primary-foreground hover:bg-primary/90 transition-colors">
+              <Link
+                to="/report"
+                onClick={() => setIsOpen(false)}
+                className="p-6 bg-primary text-lg font-bold uppercase tracking-widest text-primary-foreground hover:bg-primary/90 transition-colors block text-center"
+              >
                 Report Incident
-              </button>
+              </Link>
             </div>
           </div>
         </div>
